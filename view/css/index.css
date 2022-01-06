@@ -1,0 +1,604 @@
+:root{
+  --darkblue: #3d5a80;
+  --salmon: #FFBC97;
+  --yellow: #FFE300;
+  --orange: #FF7800;
+  --darkgrey: #293241;
+  --background: #F7F7F7;
+  --white : #ffffff;
+
+  --burgrundy: #712E1E;
+  --red: #712E1E;
+  --blue: #888870;
+  --back: #FFD5AF;
+}
+
+html,body {
+  background-color: var(--white);
+  font-family: 'Work Sans', sans-serif;
+  /*margin: 30px;*/
+  overflow-x: hidden; /*B*/
+  margin : 0; /*B*/
+  padding : 0; /*B*/
+}
+
+.titre-accueil p {
+  margin: 0 0 0 30px;
+}
+
+.titre-accueil h1{
+  font-size: 96px; /*B*/
+  color: var(--burgrundy);
+  text-align: center;
+}
+
+h2{
+  color: black;
+  margin: 0 0 0 30px;
+}
+
+h3{
+  color: var(--red);
+}
+
+/* MENU */
+
+nav{
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  top:50px;
+  text-align:center;
+}
+
+nav a{
+  font-weight:500;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--burgrundy);
+  margin:0 15px;
+  font-size:110%;
+  letter-spacing:1px;
+
+}
+nav a:before{
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background:var(--burgrundy);
+  top:47%;
+  animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+nav a:hover:before{
+  animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+
+}
+
+nav li {
+  list-style: none;
+  position:relative;
+  display:inline-block;
+}
+@keyframes in{
+  0%{
+    width: 0;
+    left:0;
+    right:auto;
+  }
+  100%{
+    left:0;
+    right:auto;
+    width: 100%;
+  }
+}
+@keyframes out{
+  0%{
+    width:100%;
+    left: auto;
+    right: 0;
+  }
+  100%{
+    width: 0;
+    left: auto;
+    right: 0;
+  }
+}
+@keyframes show{
+  0%{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+nav label
+{
+    display: none;
+}
+nav label, #toggle
+{
+    display: none;
+}
+
+@media all and (max-width: 768px)
+{
+  nav
+    {
+      height: 60px;
+    }
+
+    nav .menu 
+    {
+      display: none;
+      flex-direction: column;
+      background: var(--back);
+      padding: 15px;        
+    }
+ 
+    nav .menu a {
+      width: 50%;
+      list-style-type: none;
+    }
+ 
+    nav label 
+    {
+      width: 60px;
+      display: flex;
+      flex-direction: row; 
+      justify-content: right;
+      margin: 0 auto;
+      font-size: 40px;
+      color: var(--burgrundy);
+      cursor: pointer;
+    }
+
+    #toggle:checked + .menu {
+      display: flex;
+      position: relative;
+      gap: 20px;
+    }
+}
+
+@media screen and (max-width : 480px) {
+
+ .titre-accueil h1{
+    font-size: 200%;
+  }
+}
+
+
+
+
+/* FOOTER */
+
+.footer{
+  background: #232222;
+  width: 100%; 
+  padding: 20px 0;
+  margin-top: 30px;
+  /*position: absolute; */
+  position: static; /*B*/
+  bottom: auto; /*B*/
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  color:white;
+}
+
+.footer-center{
+  /* margin: auto 120px; */
+  padding: auto;
+  color:white;
+}
+
+
+.footer span{
+  margin-right: 1rem;
+}
+
+.footer-center a:link,
+.footer-center a:visited{
+  display: block;
+  color: white;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.footer-center a:hover{
+  color: red;
+}
+
+.footer-center h3{
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+/* DEBUT DU COPYRIGHT */
+
+.copyright{
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  padding: 4rem 0 0;
+  color: white;
+}
+
+/* FIN DU COPYRIGHT */
+
+/* ---FORMULAIRE --- */
+
+#container{
+    width:400px;
+    margin:0 auto;
+    margin-top:10%;
+}
+
+/* Bordered form */
+
+.option{
+  margin: 15px;
+}
+
+form {
+  text-align: center;
+  width:60%;
+  padding: 30px;
+  border: 1px solid #f1f1f1;
+  background: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+#container h1{
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+
+
+/* Full-width inputs */
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+/* Set a style for all buttons */
+
+input[type=submit] {
+  background-color: var(--blue);;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+input[type=submit]:hover {
+  background-color: white;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+/* --- CONTACT --- */
+
+.titre h1{
+  margin-left: 20%;
+}
+
+.contact{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#form{
+  margin-left: 15%;
+  position: relative;
+  width: 30%;
+  
+}
+
+.contact input {
+  padding: 1% 10% 1% 1%;
+  background-color: #e0e4ce;
+  margin-bottom: 0.25%;
+  border: none;
+}
+
+#button{
+  background-color: black;
+  color: white;
+  padding: 2% 5% 2% 5%;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  cursor: pointer;
+}
+
+#imagee{
+  width: 20%;
+  position: absolute;  
+}
+
+/* --- CONNEXION --- */
+
+.Connex {
+  display: flex;
+  flex-direction: row;  
+  justify-content: space-around;
+  width: 100%;
+  height: 700px;
+  flex-grow:1;
+  margin: 30px 0;
+}
+
+#connexion{
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+#mdp {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 15px;
+  color: blue;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#mdp::before {
+  animation:none;
+  background: none;
+}
+
+#submit{
+  background-color:#2ECC71;
+  font-weight: bold;
+  width: 100%;
+}
+
+#noaccount {
+  background-color : black;
+  font-weight: bold;
+  width: 100%;
+}
+
+#pasdecompte {
+  margin-bottom: 0;
+}
+
+.img_conx{
+  width: 40%;
+  height: 100%;
+  padding: auto;
+}
+
+@media screen and (max-width : 1100px) {
+
+ .img_conx{
+  display: none;
+  }
+}
+
+
+/* --- ANNONCES ---  */
+
+h1{
+  font-size: 200%;
+  color: var(--burgrundy);
+  text-align: center;
+}
+
+/* Bordered form */
+
+.option{
+  margin: 15px;
+}
+
+form {
+  text-align: center;
+  margin-top: 50px;
+  width: 95%;
+  padding: 30px;
+  border: 1px solid #f1f1f1;
+  background: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+#container h1{
+  width: 38%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+/* Full-width inputs */
+input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+
+input[type=submit] {
+  background-color: #689D71;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+}
+
+input[type=submit]:hover {
+  background-color: white;
+  color: #689D71;
+  border: 1px solid #689D71;
+}
+
+/* --- COMPTE --- */
+
+.compte{
+  width: 100%;
+  height: 500px;
+}
+
+/* ARTICLE */
+
+.compteur{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown{
+  width: 40%;
+  height: 100px;
+}
+
+.annonces{
+  background-color: var(--back);
+}
+
+.annonces h3{
+  padding: 20px;
+  text-align: center;
+}
+
+.annonces{
+  /*width: 100%;*/
+  margin: 30px;
+  height: 800px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.slide{
+  width: 500%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.annonce1, .annonce p, h5{
+  font-size: 30px;
+}
+
+.annonce {
+  width: 20%;
+  transition: 2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boutons{
+  display: none;
+}
+
+.bouton{
+  position: absolute;
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.manual-btn{
+  border: 2px solid #293241;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: #712E1E;
+}
+
+#btn1:checked ~ .first{
+  margin-left: 0;
+}
+
+#btn2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#btn3:checked ~ .first{
+  margin-left: -40%;
+}
+
+.idee{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.idee a{
+  color :var(--darkblue);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.idee a:hover{
+  color :#293241;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-center{
+  margin: auto 120px;
+  padding: auto;
+}
+
+/* COUNTDOWN */
+
+.countdown{
+  display: block;
+  margin: 20px;
+  border-radius:10px;
+
+}
+
+/* STYLE DU BOUTON DE PROPOSITION */
+
+.btn{
+  position: relative;
+  background-color: white;
+  display: inline-block;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 0.5rem 1rem var(--burgrundy);
+  margin-top: 4rem;
+  height: auto;
+  width: auto;
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
