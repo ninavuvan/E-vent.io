@@ -1,9 +1,10 @@
 
-<div class="titre-accueil">
+<div id="titre-accueil">
       <h1>E-Event . IO !</h1>
       <p><b>Bienvenue sur E-Event.IO! Le meilleur site de gestion d’idéations d’événements.</b></p>
     </div>
     <article class="annonces">
+        <!-- <?php var_dump($_SESSION['auth']); ?> -->
         <h3>Propositions d'évènements</h3>
         <div class="compteur">
           <h3> La campagne se termine dans : </h3>
@@ -36,6 +37,18 @@
       </div>
     </article>
     <div class="idee">
-      <a href="index.php?ctrl=annonce&action=annonce"><button class="btn" type="button">Proposez votre idée !</button></a>
+      <?php 
+      if(isset($_SESSION['auth']))
+        if(($_SESSION['role'] == 'organisateur') || ($_SESSION['role'] == 'admin')): ?>
+        <a href="index.php?ctrl=annonce&action=annonce"><button class="btn" type="button">Proposez votre idée !</button></a>
+      <?php endif; ?>
+
+      <?php 
+      if(isset($_SESSION['auth']))
+        if(($_SESSION['role'] == 'admin')): ?>
+        <a href="index.php?ctrl=campagne&action=campagne"><button class="btn" type="button">Proposez votre campagne !</button></a>
+      <?php endif; ?>
+
+
     </div>  
     <script src="script.js"></script>

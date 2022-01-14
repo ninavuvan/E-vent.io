@@ -1,8 +1,8 @@
-<div class="titre">
-    <h1>Contact</h1>
-</div>
+
+<strong><h1> CONTACT</h1></strong>
+
   <div class = "contact">
-    <div id="form">
+    <form action="">
       <input type="text" placeholder="Nom*"><br>
       <input type="text" placeholder="Prénom*" ><br>
       <input type="text" placeholder="E-mail*"><br>
@@ -12,9 +12,8 @@
         <option value="pb">Problème technique</option>
       </select><br>  
       <input type="text"  placeholder="message"><br>
-      <input type="submit" id="button" value="envoyer">
-    </div>
-    
+      <input type="submit" value="Envoyer">
+    </form>
     <div>
       <img src="view/img/image_contact.png" id="imagee">
     </div>

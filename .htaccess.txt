@@ -8,7 +8,3 @@ RewriteEngine On
 # ignore les fichiers, dossier existant
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-
-# chaque requete get sera exécutée avec l'action action=var
-RewriteRule ^(.*)$ index.php?action=$1 [L,QSA]
-*/

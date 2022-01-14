@@ -1,0 +1,378 @@
+:root{
+  --darkblue: #3d5a80;
+  --salmon: #FFBC97;
+  --yellow: #FFE300;
+  --orange: #FF7800;
+  --darkgrey: #293241;
+  --background: #F7F7F7;
+  --white : #ffffff;
+
+  --burgrundy: #712E1E;
+  --red: #712E1E;
+  --blue: #888870;
+  --back: #FFD5AF;
+  --width: 400px;
+  --height: 350px;
+}
+
+#titre-accueil p {
+  text-align: center;
+}
+
+#titre-accueil h1{
+  font-size: 96px; /*B*/
+  color: var(--burgrundy);
+  margin: 10%;
+}
+
+
+/* ---FORMULAIRE --- */
+
+#container{
+    width:400px;
+    margin:0 auto;
+    margin-top:10%;
+}
+
+/* Bordered form */
+
+option{
+  margin: 15px;
+
+}
+
+/*#container h1{
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}*/
+
+/* Full-width inputs */
+input[type=text], input[type=password], input[type=email], input[type=date], input[type=number], input[type=button], select {
+    width: var(--width);
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+
+/* Set a style for all buttons */
+
+input[type=submit] {
+  background-color: var(--blue);;
+  color: var(--white);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: var(--width);
+}
+
+input[type=submit]:hover {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+/* --- CONTACT --- */
+
+
+
+.contact{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/*.contact input {
+  padding: 1% 10% 1% 1%;
+  background-color: #e0e4ce;
+  margin-bottom: 0.25%;
+  border: none;
+}
+
+#button{
+  background-color: black;
+  color: white;
+  padding: 2% 5% 2% 5%;
+  margin-top: 2%;
+  margin-left: 0;
+  margin-bottom: 5%;
+  cursor: pointer;
+}*/
+
+#imagee{
+  width: 400px;
+  /* position: relative; */ 
+}
+
+/* --- CONNEXION --- */
+
+.Connex {
+  display: flex;
+  flex-direction: row;  
+  justify-content: space-around;
+  width: 100%;
+  height: 700px;
+  flex-grow:1;
+  margin: 30px 0;
+}
+
+/*#connexion{
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+}*/
+
+#mdp {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 15px;
+  color: blue;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#mdp::before {
+  animation:none;
+  background: none;
+}
+
+.connexionbtn{
+  color: var(--white);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+#submit{
+  background-color:#2ECC71;
+  font-weight: bold;
+  width: 100%;
+}
+
+#submit:hover{
+  background-color: var(--white);
+  color: #2ECC71;
+}
+
+#noaccount {
+  background-color : var(--white);
+  width: 100%;
+  color: var(--blue);
+}
+
+#noaccount:hover{
+  background-color: var(--blue);
+  border: 1px solid var(--white);
+  color: var(--white)
+}
+
+#pasdecompte {
+  margin-bottom: 0;
+}
+
+#img_conx{
+  width: 400px;
+  height: 425px;
+  margin: 40px;
+}
+
+@media screen and (max-width : 1100px) {
+
+ .img_conx{
+  display: none;
+  }
+}
+
+/* --- ANNONCES ---  */
+
+h1{
+  font-size: 200%;
+  color: var(--burgrundy);
+  text-align: center;
+}
+
+#description{
+  height: 100px;
+}
+
+/* Bordered form */
+
+
+.option{
+  margin: 15px;
+}
+
+form {
+  text-align: center;
+  margin: 50px;
+  width: var(--width);
+  height: 350px;
+  padding: 30px;
+  border: 1px solid var(--white);
+  background: var(--white);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#container h1{
+  width: 38%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+/* Full-width inputs */
+
+
+/* --- COMPTE --- */
+
+.compte{
+  width: 100%;
+  height: 500px;
+}
+
+/* ARTICLE */
+
+.compteur{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown{
+  width: 40%;
+  height: 100px;
+}
+
+.annonces h3{
+  padding: 20px;
+  text-align: center;
+}
+
+.annonces{
+  background-color: var(--back);
+  margin: 10%;
+  height: 800px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.slide{
+  width: 500%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.annonce1, .annonce p, h5{
+  font-size: 30px;
+}
+
+.annonce {
+  width: 20%;
+  transition: 2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boutons{
+  display: none;
+}
+
+.bouton{
+  position: absolute;
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.manual-btn{
+  border: 2px solid #293241;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: #712E1E;
+}
+
+#btn1:checked ~ .first{
+  margin-left: 0;
+}
+
+#btn2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#btn3:checked ~ .first{
+  margin-left: -40%;
+}
+
+.idee{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.idee a{
+  color :var(--darkblue);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.idee a:hover{
+  color :#293241;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-center{
+  margin: auto 120px;
+  padding: auto;
+}
+
+/* COUNTDOWN */
+
+.countdown{
+  display: block;
+  margin: 20px;
+  border-radius:10px;
+
+}
+
+/* STYLE DU BOUTON DE PROPOSITION */
+
+.btn{
+  position: relative;
+  background-color: var(--white);
+  display: inline-block;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 0.5rem 1rem var(--burgrundy);
+  margin-top: 4rem;
+  height: auto;
+  width: auto;
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
