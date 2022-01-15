@@ -3,9 +3,10 @@
 
 echo'<header>
   <nav>
+  <input type="checkbox" id="active">
+  <label for="active" class="menu-btn"><span></span></label>
+  <label for="active" class="close"></label>
     <div class="wrapper">
-    <label for="toggle">☰</label>
-    <input type="checkbox" id="toggle">
       <ul class="menu">  
         <li><a href="index.php">Accueil</a></li>
         <li><a href="index.php?ctrl=homepage&action=contact">Contact</a></li> '?>
