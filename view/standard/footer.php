@@ -1,12 +1,12 @@
 <?php
 
-echo '<footer class="footer">
+echo '<footer>
   <div class="footer-container">
     <div class="footer-center">
       <h3>Aide & Information</h3>
-      <a href="index.php?ctrl=cgu&action=cgu">Conditions Générales d\'Utilisation</a>
+      <a href="index.php?ctrl=homepage&action=cgu">Conditions Générales d\'Utilisation</a>
       <a href="#">Confidentialité et cookies</a>
-      <a href="index.php?ctrl=contact&action=contact">Contact</a>
+      <a href="index.php?ctrl=homepage&action=info">À Propos</a>
     </div>
     <div class="footer-center">
       <h3>Contact</h3>

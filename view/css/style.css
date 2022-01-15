@@ -1,27 +1,23 @@
 :root{
-  --darkblue: #3d5a80;
+  --orange : #ff7f00;
+  --red: #DC143C;
   --salmon: #FFBC97;
-  --yellow: #FFE300;
-  --orange: #FF7800;
-  --darkgrey: #293241;
-  --background: #F7F7F7;
   --white : #ffffff;
-
-  --burgrundy: #712E1E;
-  --red: #712E1E;
-  --blue: #888870;
-  --back: #FFD5AF;
-  --width: 400px;
-  --height: 350px;
+  --darkblue: #03404c;
+  --blue: #3d6f7e;
+  --back: #FFFACD;
+  --footer:#07171b;
+  --formwidth: 400px;
 }
 
 #titre-accueil p {
   text-align: center;
+  color: var(--orange)
 }
 
 #titre-accueil h1{
   font-size: 96px; /*B*/
-  color: var(--burgrundy);
+  color: var(--darkblue);
   margin: 10%;
 }
 
@@ -49,7 +45,7 @@ option{
 
 /* Full-width inputs */
 input[type=text], input[type=password], input[type=email], input[type=date], input[type=number], input[type=button], select {
-    width: var(--width);
+    width: var(--formwidth);
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -68,7 +64,7 @@ input[type=submit] {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: var(--width);
+  width: var(--formwidth);
 }
 
 input[type=submit]:hover {
@@ -150,17 +146,6 @@ input[type=submit]:hover {
   cursor: pointer;
 }
 
-#submit{
-  background-color:#2ECC71;
-  font-weight: bold;
-  width: 100%;
-}
-
-#submit:hover{
-  background-color: var(--white);
-  color: #2ECC71;
-}
-
 #noaccount {
   background-color : var(--white);
   width: 100%;
@@ -185,7 +170,7 @@ input[type=submit]:hover {
 
 @media screen and (max-width : 1100px) {
 
- .img_conx{
+ #img_conx{
   display: none;
   }
 }
@@ -194,7 +179,7 @@ input[type=submit]:hover {
 
 h1{
   font-size: 200%;
-  color: var(--burgrundy);
+  color: var(--darkblue);
   text-align: center;
 }
 
@@ -256,31 +241,32 @@ form {
 }
 
 .annonces{
-  background-color: var(--back);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--blue);
   margin: 10%;
   height: 800px;
   border-radius: 10px;
   overflow: hidden;
 }
-.slide{
+/*.slide{
   width: 500%;
   height: 400px;
   display: flex;
   align-items: center;
-}
+}*/
 
 .annonce1, .annonce p, h5{
   font-size: 30px;
+  color: var(--white);
 }
 
-.annonce {
+/*.annonce {
   width: 20%;
   transition: 2s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  
 }
-
+/*
 .boutons{
   display: none;
 }
@@ -294,34 +280,7 @@ form {
   justify-content: center;
   align-items: flex-end;
 }
-
-.manual-btn{
-  border: 2px solid #293241;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.manual-btn:not(:last-child){
-  margin-right: 40px;
-}
-
-.manual-btn:hover{
-  background: #712E1E;
-}
-
-#btn1:checked ~ .first{
-  margin-left: 0;
-}
-
-#btn2:checked ~ .first{
-  margin-left: -20%;
-}
-
-#btn3:checked ~ .first{
-  margin-left: -40%;
-}
+*/
 
 .idee{
   display: flex;
@@ -330,7 +289,7 @@ form {
 }
 
 .idee a{
-  color :var(--darkblue);
+  color :var(--blue);
   font-weight: bold;
   text-decoration: none;
   font-size: 12px;
@@ -340,15 +299,6 @@ form {
   color :#293241;
 }
 
-.footer-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.footer-center{
-  margin: auto 120px;
-  padding: auto;
-}
 
 /* COUNTDOWN */
 
@@ -367,7 +317,7 @@ form {
   display: inline-block;
   border-radius: 15px;
   padding: 10px;
-  box-shadow: 0 0.5rem 1rem var(--burgrundy);
+  box-shadow: 0 0.5rem 1rem var(--darkblue);
   margin-top: 4rem;
   height: auto;
   width: auto;
@@ -375,4 +325,69 @@ form {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+/* SLIDER */
+
+/* Slideshow container */
+.slide {
+  position: relative;
+  background: var(--blue);
+}
+
+/* Slides */
+.annonce {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: var(--darkblue);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #788d94;
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: var(--darkblue);
 }

@@ -1,14 +1,16 @@
 <?php
 // Ce fichier est le point d'entrée de votre application
-include'router/routeur.php';
+//include'router/routeur.php';
 require'noyau/ChargementAuto.php';
-    
+Usercontroller::SessionAction();
+ 
    
     /*
      url pour notre premier test MVC Hello World,
      nous n'avons pas d'action précisée on visera celle par défaut
      index.php?ctrl=helloworld
     */
+    //var_dump($_GET);
     //$O_routeur = new routeur();
     //$O_routeur->start();
     $S_controleur = isset($_GET['ctrl']) ? $_GET['ctrl'] : null;

@@ -13,6 +13,9 @@ $url = $_SERVER['REQUEST_URI'];
     if(isset($_GET['p']))
     $parametres = explode('/',$_GET['p']);
     var_dump($parametres);
+    var_dump($_GET);
+    die();
+    
     if($parametres[0]!=''){
         $controller = ucfirst(strtolower(array_shift($parametres))).'controller';
         $controller = new $controller();

@@ -1,15 +1,37 @@
-<?php
-
-final class Homepagecontroller
+<?php final class Homepagecontroller
 {
-    public function defautAction()
-    {
-      
-        $O_homepage =  new Homepage();
-
-        Vue::montrer('accueil/homepage');
-    }  
-  
+  public function __construct(){
+  $this->$O_homepage =  new Homepage();;
+  }
+  public function defautAction()
+  {
+    Vue::montrer('accueil/homepage');
+  }  
+  public function InfoAction()
+  {
+    Vue::montrer('accueil/about');
+  }
+  public function ContactAction()
+  {
+    Vue::montrer('accueil/contact');
+  }
+  public function CguAction()
+  {
+    Vue::montrer('accueil/cgu');
+  }
+  public function PostAction() {
+    $result = $this->$O_homepage->addAccount();    
+    
+    if($result == 'ok'){
+    echo 'Données insérées';
+    
+    }
+    else{
+    echo "Échec de l'opération d'insertion";
+    var_dump($result);
+    
+  }
+  }
 }
-
+  
 ?>

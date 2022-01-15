@@ -1,7 +1,6 @@
 
 
 <div class="compte">
-   <?php var_dump($_SESSION['auth']); ?>
   <p>Bonjour <b><?= Comptecontroller::getUserAction('username'); ?></b></p>
 
   <p>Mes informations : </p>
