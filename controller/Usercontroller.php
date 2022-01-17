@@ -7,16 +7,15 @@ final class Usercontroller
     Vue::montrer('users/sign-in');
   }
   public function __construct(){
-  $this->O_connexion = new Connexion();
-  $this->O_deconnexion =new Deconnexion();
   $this->O_changepassword =new Changepassword();
+  $this->O_user=new User();
   }
 
   public function ConnexionAction(){
-    $result = $this->O_connexion->getlogin();   
+    $result = $this->O_user->getlogin();   
     if($result == 'login')
     { 
-      Vue::montrer('accueil/homepage');
+      header('Location:index.php');
     }
     else if($result == 'changemdp')
     {
@@ -57,7 +56,7 @@ final class Usercontroller
 
   public function LogoutAction()
   {
-    $this->O_deconnexion->logout();
+    $this->O_user->logout();
     $_SESSION['flash']['sucess'] = "Vous avez été déconnecté";
     Vue::montrer('users/sign-in');      
   }
@@ -65,6 +64,16 @@ final class Usercontroller
   public function MdpoublieAction(){
     Vue::montrer('users/mdpoublie');
   }
+  public function canpostAction(){
+    if ($this->O_user->isFull())
+       return 'pas ok';
+    else {
+      return 'ok';
+      }
+    }
+
+  
+  
 
 }
 

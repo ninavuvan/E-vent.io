@@ -1,4 +1,4 @@
-,<?php
+<?php
 
 final class Campagne {
 
@@ -20,11 +20,13 @@ final class Campagne {
     $req->bindParam(':date_fin', $date_fin);
     $req->bindParam(':points', $points);
     $req->execute();
-    return 'ok';
+    exit();
+    return 'ok';}
   else
-    return 'echec'
+    return 'echec';
   
   }
+
 }
-}
+
 ?> 

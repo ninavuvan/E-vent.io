@@ -80,6 +80,7 @@ input[type=submit]:hover {
 .contact{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -101,7 +102,8 @@ input[type=submit]:hover {
 }*/
 
 #imagee{
-  width: 400px;
+  width: 270px;
+  position: relative;
   /* position: relative; */ 
 }
 
@@ -197,7 +199,7 @@ h1{
 form {
   text-align: center;
   margin: 50px;
-  width: var(--width);
+  width: var(--formwidth);
   height: 350px;
   padding: 30px;
   border: 1px solid var(--white);
@@ -244,10 +246,10 @@ form {
   display: flex;
   flex-direction: column;
   background-color: var(--blue);
-  margin: 10%;
-  height: 800px;
+  margin : 10px;
+  margin-bottom: 0;
+  height: 700%;
   border-radius: 10px;
-  overflow: hidden;
 }
 /*.slide{
   width: 500%;
@@ -286,6 +288,7 @@ form {
   display: flex;
   justify-content: flex-end;
   padding-right: 10px;
+  margin-bottom: 40px; 
 }
 
 .idee a{
@@ -314,11 +317,11 @@ form {
 .btn{
   position: relative;
   background-color: var(--white);
-  display: inline-block;
+  display: block;
+  margin: auto;
   border-radius: 15px;
   padding: 10px;
   box-shadow: 0 0.5rem 1rem var(--darkblue);
-  margin-top: 4rem;
   height: auto;
   width: auto;
   text-align: center;
@@ -373,6 +376,7 @@ form {
 /* The dot/bullet/indicator container */
 .dot-container {
   text-align: center;
+  padding: 20px;
 }
 
 /* The dots/bullets/indicators */
@@ -390,4 +394,63 @@ form {
 /* Add a background color to the active dot/circle */
 .active, .dot:hover {
   background-color: var(--darkblue);
+}
+
+/* COMPTE */
+
+.cpt{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cptinfo{
+  background-color: var(--back);
+  border-radius: 30px;
+  flex-grow: 1;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
+}
+
+h4{
+  color: var(--orange);
+  text-align: center;
+  margin: 10px;
+}
+
+.cpt li{
+  text-align: center;
+}
+/* GESTION USER */
+
+#gestionUsrLink{
+  text-decoration: none;
+  color: black;
+}
+
+#gestionUsrLink:hover{
+  color: var(--red);
+}
+
+
+li{
+  list-style: none;
+}
+
+.usrlist{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.usrinformations{
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  background-color: var(--back);
+  border-radius: 40px;
+  box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, .2);
 }

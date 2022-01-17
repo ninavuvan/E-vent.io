@@ -2,19 +2,12 @@
 
 final class Modelbis
 {
-  
   public function generstr($number = 6){
-  $carac = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-  $password = array(); 
-  $lenght = strlen($carac) - 1; 
-  for ($i = 0; $i < $number; $i++) {
-      $n = rand(0, $lenght);
-      $password[] = $carac[$n];
-  }
-  $password = implode($password);
+  $carac = "0123456789azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN";
+  $password = substr(str_shuffle(str_repeat($carac, 5)), 0, 7);
   return $password; 
   }
 
+  
 }
-
 ?>

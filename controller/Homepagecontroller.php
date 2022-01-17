@@ -19,6 +19,10 @@
   {
     Vue::montrer('accueil/cgu');
   }
+  public function CookieAction()
+  {
+    Vue::montrer('accueil/cookie');
+  }
   public function PostAction() {
     $result = $this->$O_homepage->addAccount();    
     

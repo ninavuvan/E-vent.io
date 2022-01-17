@@ -1,3 +1,4 @@
+<!--A supp et mettre le code dans User.php --> 
 <?php
 
 final class Changepassword {
